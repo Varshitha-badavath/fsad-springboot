@@ -30,7 +30,7 @@ public class Assignment {
     @Enumerated(EnumType.STRING)
     private Status status = Status.ACTIVE;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "teacher_id", nullable = false)
     @JsonIgnoreProperties({"password", "hibernateLazyInitializer", "handler"})
     private User teacher;
